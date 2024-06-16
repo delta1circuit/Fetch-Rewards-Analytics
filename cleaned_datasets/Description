@@ -1,3 +1,0 @@
-These are the cleaned datasets in the csv format. 
-
-Fetch_db_EDA.ipynb has been used to clean the json files, and perform some basic data analysis to help the querying process
