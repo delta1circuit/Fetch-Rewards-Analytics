@@ -39,7 +39,7 @@ Following the data cleaning, I designed a new schema to streamline the workflow.
 
 While each SQL query is thoroughly commented within the SQL file, this section provides a summary of key outputs available in the outputs folder.
 
-* What are the top 5 brands by receipts scanned for the nmost recent month?
+* What are the top 5 brands by receipts scanned for the most recent month?
 
 The latest data was from January 2021. 
 
