@@ -1,4 +1,4 @@
-# Fetch Analytics
+# Fetch Rewards Analytics
 
 This comprehensive data analysis project is focused on extracting, cleaning, and analyzing datasets from Fetch Rewards. The project utilizes three main JSON datasets: users, brands, and receipts, each offering unique insights and challenges. Through meticulous data cleaning and exploratory data analysis conducted in Python, the project aims to create actionable insights and facilitate data-driven decisions. Key components of the project include identifying duplicate entries, standardizing data types, and reformatting datasets for optimal use in PostgreSQL databases. Additionally, the project features a series of SQL queries that address specific business questions, enhancing our understanding of user behavior and brand performance within the Fetch Rewards platform. The final outputs are designed to support strategic business decisions by highlighting spending patterns, brand popularity, and transaction trends.
 
