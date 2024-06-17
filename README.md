@@ -2,40 +2,40 @@
 
 This comprehensive data analysis project is focused on extracting, cleaning, and analyzing datasets from Fetch Rewards. The project utilizes three main JSON datasets: users, brands, and receipts, each offering unique insights and challenges. Through meticulous data cleaning and exploratory data analysis conducted in Python, the project aims to create actionable insights and facilitate data-driven decisions. Key components of the project include identifying duplicate entries, standardizing data types, and reformatting datasets for optimal use in PostgreSQL databases. Additionally, the project features a series of SQL queries that address specific business questions, enhancing our understanding of user behavior and brand performance within the Fetch Rewards platform. The final outputs are designed to support strategic business decisions by highlighting spending patterns, brand popularity, and transaction trends.
 
-# Data Cleaning  
+## Data Cleaning  
 This repository contains three JSON files with data related to users, receipts, and brands on Fetch Rewards. The Python notebook provides a detailed exploration and analysis (EDA), while this section offers an overview of that process.
 
-* Users
+### Users
   
-The user data is relatively straightforward, comprising a unique user ID for each individual, along with other details such as location and account creation date.
+The `users.json` data is relatively straightforward, comprising a unique `userID` for each individual and other details such as location and account creation date.
 
 ![image](https://github.com/delta1circuit/Fetch_Analytics/assets/63530749/58fce4fc-5fc6-4c76-bdbb-716e6f1bba48)
 
-However, the data is not pristine. An initial examination revealed 283 duplicate rows, which were subsequently removed. Additionally, inconsistencies in data types required standardization to ensure compatibility with PostgreSQL. The user ID was identified as the primary key.
+However, the data is not pristine. An initial examination revealed 283 duplicate rows, which were subsequently removed. Additionally, inconsistencies in data types required standardization to ensure compatibility with PostgreSQL. The `userID` was identified as the primary key.
 
-* Brands
+### Brands
   
-The second JSON file pertains to the brands dataset, which is separate from the user data. It contains information about various brands and their products.
+The second JSON file pertains to the `brands.json` dataset, which is separate from the user data. It contains information about various brands and their products.
 
 ![image](https://github.com/delta1circuit/Fetch_Analytics/assets/63530749/c0289cd7-ee3e-485c-aa7f-e6cb1ef02b0e)
 
-Here, the brand ID serves as the primary key. Each brand ID is linked to a specific barcode, offering a potential pair of primary keys, though this was deemed unnecessary for this analysis. This dataset also contained errors and non-standard characters that were incompatible with SQL, necessitating thorough cleaning.
+Here, the `brandID` serves as the primary key. Each `brandID` is linked to a specific `barcode`, offering a potential pair of primary keys, though this was deemed unnecessary for this analysis. This dataset also contained errors and non-standard characters that were incompatible with SQL, necessitating thorough cleaning.
 
-* Receipts
+### Receipts
 
-The receipts JSON is the most complex dataset, incorporating another compressed JSON.
+The `receiptsJSON` is the most complex dataset, incorporating another compressed JSON.
 
 ![image](https://github.com/delta1circuit/Fetch_Analytics/assets/63530749/e1aaa5f1-c3e9-4907-933c-8648ed61d1ac)
 
-Cleaning this data involved not only standardizing its format but also attaching unique identifiers to the internal JSON. I expanded this internal JSON to create a new dataframe called the Item List dataframe, which details each item on the receipts, each identified by a primary key. This restructuring was aimed at simplifying queries and enhancing data readability.
+Cleaning this data involved not only standardizing its format but also attaching unique identifiers to the internal JSON. I expanded this internal JSON to create a new dataframe called the Item List dataframe, which details each item on the receipts, each identified by the primary key `receiptId`. This restructuring was aimed at simplifying queries and enhancing data readability.
 
-# Making the relational schema
+## Making the relational schema
 
 Following the data cleaning, I designed a new schema to streamline the workflow. This schema structure enhances data integrity and query efficiency, serving as a robust foundation for analyzing transactions and interactions within the Fetch Rewards ecosystem.
 
 ![Schema](https://github.com/delta1circuit/Fetch_Analytics/assets/63530749/943e25c4-6824-4823-9262-4692aabccfb1)
 
-# Queries
+## Queries
 
 While each SQL query is thoroughly commented within the SQL file, this section provides a summary of key outputs available in the outputs folder.
 
